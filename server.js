@@ -34,6 +34,8 @@ app.get('/', (req, res) => {
 // Finally, we defined the port and listen to that port for incoming connections.
 let PORT = 8080
 
+require("./routes/routes.js")(app);
+
 app.listen(PORT, () => {
     console.log(`Server is listening on port ${PORT}`);
 });
