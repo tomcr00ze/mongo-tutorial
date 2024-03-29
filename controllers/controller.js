@@ -1,4 +1,4 @@
-const App = require("../model/model.js");
+const App = require("../models/model.js");
 
 // Create and Save a new Message
 exports.create = (req, res) => {
@@ -86,7 +86,7 @@ exports.update = (req, res) => {
 
 // Delete a message with the specified messageId in the request
 exports.delete = (req, res) => {
-  App.findByIdAndRemove(req.params.messageId)
+  App.findByIdAndDelete(req.params.messageId)
     .then((data) => {
       if (!data) {
         return res.status(404).send({

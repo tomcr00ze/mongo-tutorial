@@ -11,7 +11,7 @@ const mongoose = require('mongoose')
 mongoose.Promise = global.Promise
 
 // This code establishes a connection to a MongoDB database using Mongoose
-mongoose.connect(YOUR_MONGODB_URL, {
+mongoose.connect("mongodb://localhost:27017/", {
     useNewUrlParser: true
 }).then(() => {
     console.log("Successfully connected to the database");    
